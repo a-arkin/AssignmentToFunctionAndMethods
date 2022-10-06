@@ -19,7 +19,9 @@ namespace AssignmentToFunctionAndMethods
             int x0 = 1;
             int x1 = 4;
             int x2 = 2;
-            points.Segment(x0, x1, x2);
+            bool result11=points.Segment(x0, x1, x2);
+            Console.WriteLine($"{result11}\n");
+            
 
             //3 задание
             Console.WriteLine("Задание №3");

@@ -7,11 +7,11 @@ namespace AssignmentToFunctionAndMethods
     class MathService
     {
         // метод 2 задания
-        public void Segment (int x0, int x1, int x2)
+        public bool Segment (int x0, int x1, int x2)
         {
 
             bool result = x2 >= x0 && x2 <= x1 ? true : false;
-            Console.WriteLine($"{result}\n");
+            return result;
         }
        
         // метод 3 задания
