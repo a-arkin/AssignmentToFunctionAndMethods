@@ -22,16 +22,15 @@ namespace AssignmentToFunctionAndMethods
         }
         
         // метод 4 задания
-        public void Number(int number)
+        public string Number(int number)
         {
+            string result = $"false\n";
             if (number%2==0)
             {
-                Console.WriteLine("True\n");
+                result = $"True\n";
+                return result;
             }
-            else
-            {
-                Console.WriteLine("False\n");
-            }
+            return result;
         }
         
         // метод 5 задания
@@ -46,140 +45,129 @@ namespace AssignmentToFunctionAndMethods
         }
         
         // метод 7 задания
-        public void AreaRectangle(int width, int length)
+        public int AreaRectangle(int width, int length)
         {
             int result = width* length;
-            Console.WriteLine($"{result}\n");
+            return result;
         }
         
         // метод 8 задания
-        public void VolumeParallelepiped(int widthParallelepiped, int lengthParallelepiped, int heightParallelepiped)
+        public int VolumeParallelepiped(int widthParallelepiped, int lengthParallelepiped, int heightParallelepiped)
         {
             int result = widthParallelepiped* lengthParallelepiped* heightParallelepiped;
-            Console.WriteLine($"{result}\n");
+            return result;
         }
         
         // метод 10 задания
-        public int firstNumber;
-        public int secondNumber;
-        public void SomeNumber( int firstNumber, int secondNumber)
+        public string SomeNumber( int firstNumber, int secondNumber)
         {
             int intermediate = firstNumber;
             firstNumber = secondNumber;
             secondNumber = intermediate;
-
-            Console.WriteLine($"{firstNumber} {secondNumber}\n");
-            // не понял, как выводить через ref. По итоге приравнивал оба значения
+            string result=$"{firstNumber} {secondNumber}\n";
+            return result;
         }
 
         // метод 11 задания
-        public int numberOne0;
-        public int numberTwo0;
-        public void MaxNumber0(int numberOne0, int numberTwo0)
+        public string MaxNumber0(int numberOne0, int numberTwo0)
         {
+            string result = $"Значения равны\n";
             if (numberOne0!= numberTwo0)
             {
-                int result = numberOne0 > numberTwo0 ? numberOne0 : numberTwo0;
-                Console.WriteLine($"{result}\n");
+                int result0 = numberOne0 > numberTwo0 ? numberOne0 : numberTwo0;
+                result=$"{result0}\n";
+                return result;
             }
-            else
-            {
-                Console.WriteLine($"Значения равны\n");
-            }
+            return result;
         }
 
         //метод 12 задания
-        public int numberOne1;
-        public int numberTwo1;
-        public int numberThree1;
-        public void MaxNumber1(int numberOne1, int numberTwo1, int numberThree1)
+        public string MaxNumber1(int numberOne1, int numberTwo1, int numberThree1)
         {
             int max = numberOne1;
+            string result = $"{max}\n";
             if (max< numberTwo1)
             {
                 max = numberTwo1;
-                Console.WriteLine($"{max}\n");
+                result=$"{max}\n";
+                return result;
             }
             else if (max < numberThree1)
             {
                 max = numberThree1;
-                Console.WriteLine($"{max}\n");
+                result=$"{max}\n";
+                return result;
             }
-            else
-            {
-                Console.WriteLine($"{max}\n");
-            }
+            return result;
         }
 
         // метод 13 задания
-        public int minnumberOne0;
-        public int minnumberTwo0;
-        public void MinNumber0(int minnumberOne0, int minnumberTwo0)
+        public string MinNumber0(int minnumberOne0, int minnumberTwo0)
         {
+            string result = $"Значения равны\n";
             if (minnumberOne0 != minnumberTwo0)
             {
-                int result = minnumberOne0 < minnumberTwo0 ? minnumberOne0 : minnumberTwo0;
-                Console.WriteLine($"{result}\n");
+                int result0 = minnumberOne0 < minnumberTwo0 ? minnumberOne0 : minnumberTwo0;
+                result=$"{result0}\n";
+                return result;
             }
-            else
-            {
-                Console.WriteLine($"Значения равны\n");
-            }
+            return result;
         }
 
         // метод 14 задания
-        public int minNumberOne1;
-        public int minNumberTwo1;
-        public int minNumberThree1;
-        public void MinNumber1(int minNumberOne1, int minNumberTwo1, int minNumberThree1)
+        public string MinNumber1(int minNumberOne1, int minNumberTwo1, int minNumberThree1)
         {
             int min = minNumberOne1;
+            string result = $"{min}\n";
             if (min> minNumberTwo1)
             {
                 min = minNumberTwo1;
-                Console.WriteLine($"{min}\n");
+                result=$"{min}\n";
+                return result;
             }
             else if(min> minNumberThree1)
             {
                 min = minNumberThree1;
-                Console.WriteLine($"{min}\n");
+                result=$"{min}\n";
+                return result;
             }
-            else
-            {
-                Console.WriteLine($"{min}\n");
-            }
+            return result;
         }
 
         // метод 18 задания
-        public int numberOne18;
-        public int numberTwo18;
         Operation operation = new Operation();
-        public void MathOperation(int numberOne18, int numberTwo18)
+        public string MathOperation(int numberOne18, int numberTwo18)
         {
+            string result = "0";
             Operation operation = Operation.addition;
             if (operation== Operation.addition)
             {
-                int result = numberOne18+ numberTwo18;
-                Console.WriteLine($"{result}\n");
+                int result0 = numberOne18+ numberTwo18;
+                result=$"{result0}\n";
+                return result;
             }
             operation = Operation.multiplication;
             if (operation== Operation.multiplication)
             {
-                int result = numberOne18 * numberTwo18;
-                Console.WriteLine($"{result}\n");
+                int result0 = numberOne18 * numberTwo18;
+                result=$"{result0}\n";
+                return result;
             }
             operation = Operation.division;
             if (operation == Operation.division)
             {
-                int result = numberOne18 / numberTwo18;
-                Console.WriteLine($"{result}\n");
+                int result0 = numberOne18 / numberTwo18;
+                result=$"{result0}\n";
+                return result;
             }
             operation = Operation.difference;
             if (operation == Operation.difference)
             {
-                int result = numberOne18 - numberTwo18;
-                Console.WriteLine($"{result}\n");
+                int result0 = numberOne18 - numberTwo18;
+                result=$"{result0}\n";
+                return result;
             }
+            return result;
         }
 
     }
